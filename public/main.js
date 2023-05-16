@@ -1,5 +1,5 @@
 import '../styles/main.scss'; // You have to import your styles for them to work. Comment in this line
-import htmlStructure from '../utils/htmlStructure';
+import { htmlStructure, studentAreas } from '../utils/htmlStructure';
 import renderToDOM from '../utils/renderToDOM';
 import header from '../components/headerHTML';
 import houses from '../utils/housesArray';
@@ -13,11 +13,7 @@ const startSortingBtn = () => {
   const domString = '<button type="button" class="btn btn-info" id="start-sorting">Start the Sorting Ceremony!</button>';
   renderToDOM('#form-container', domString);
 };
-const studentAreas = () => {
-  const domString = `<div id="students">No Students</div>
-  <div id="voldy">No Death Eaters</div>`;
-  renderToDOM('#student-container', domString);
-};
+
 const studentsOnDom = (divId, array, house = 'Hogwarts') => {
   let domString = '';
   if (!array.length) {
